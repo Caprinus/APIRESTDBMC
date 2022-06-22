@@ -1,5 +1,4 @@
 from django.test import TestCase
-from rest_framework.test import APITestCase
 
 # Create your tests here.
 
@@ -8,6 +7,7 @@ class SigninTest(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(username='test', password='12test12', email='test@example.com')
         self.user.save()
+        
 
     def tearDown(self):
         self.user.delete()
